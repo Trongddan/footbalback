@@ -59,7 +59,6 @@ const userController = {
   },
   getAllPlayer: async(req,res)=>{
     try {
-      console.log(1);
       const listPlayer = await User.find().sort('name');
       res.status(200).json(listPlayer);
     } catch (error) {

@@ -10,6 +10,7 @@ app.use(morgan("common"));
 app.use(cors({ origin: "*" }));
 app.use(express.json());
 route(app);
+app.use(express.static("src"));
 app.listen(8000, () => {
   console.log("server is running");
 });
